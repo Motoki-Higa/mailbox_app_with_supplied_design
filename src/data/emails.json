@@ -1,0 +1,58 @@
+{
+  "emails": [
+    {
+      "id": 1,
+      "from": "aaa@example.com",
+      "to": ["zzz.zzz@example.com"],
+      "subject": "[ HR-888 ] Notice of official announcement",
+      "attachment": false,
+      "date": "Sat Aug 08 2020 00:20:00 GMT+0900 (Japan Standard Time)",
+      "body": "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs."
+    },
+    {
+      "id": 2,
+      "from": "bbb.bbbb@example.com",
+      "to": ["yyy@example.com"],
+      "subject": "[web:333] \"Web Contact\"",
+      "attachment": false,
+      "date": "Sat Aug 08 2020 00:10:00 GMT+0900 (Japan Standard Time)",
+      "body": "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs."
+    },
+    {
+      "id": 3,
+      "from": "ccc.ccc@example.com",
+      "to": ["xxx@example.com", "xxx@example.com"],
+      "subject": "Happy New Year! Greetings for the New Year.",
+      "attachment": true,
+      "date": "Fri Aug 07 2020 00:00:00 GMT+0900 (Japan Standard Time)",
+      "body": "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs."
+    },
+    {
+      "id": 4,
+      "from": "ddd.ddd@example.com",
+      "to": ["vvv.vvv@example.com","vvv.vvv@example.com"],
+      "subject": "[HR-887(Revised: Office Expansion Project Team)] Notice of off",
+      "attachment": false,
+      "date": "Fri Aug 07 2020 00:00:00 GMT+0900 (Japan Standard Time)",
+      "body": "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs."
+    },
+    {
+      "id": 5,
+      "from": "eee@example.com",
+      "to": ["sss@example.com","ddd@example.com","aaa@example.com"],
+      "subject": "[Github] Logout page",
+      "attachment": false,
+      "date": "Fri Jul 31 2020 00:00:00 GMT+0900 (Japan Standard Time)",
+      "body": "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs."
+    },
+    {
+      "id": 6,
+      "from": "fff.ffff@example.com",
+      "to": ["qqq.qqq@example.com"],
+      "subject": "[dev]Postfix 3.1.12 / 3.2.9 / 3.3.4 / 3.4.5",
+      "attachment": false,
+      "date": "Fri Jul 31 2020 00:00:00 GMT+0900 (Japan Standard Time)",
+      "body": "Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs."
+    }
+  ]
+}

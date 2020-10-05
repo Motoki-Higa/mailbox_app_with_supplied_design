@@ -1,0 +1,564 @@
+// global
+@import 'styles/_normalize';
+@import 'styles/_libs';
+@import 'styles/_media';
+@import 'styles/_swatch';
+@import 'styles/_fonts';
+@import 'styles/_opacity';
+@import 'styles/_transition';
+@import 'styles/_g-unique';
+@import 'styles/_mixin';
+// layout
+@import 'styles/_layout';
+
+
+/*****************************
+.appContainer
+*****************************/
+.appContainer {
+  color: $color-primary-black;
+  margin-top: 50px;
+
+  @include mobile {
+    margin-top: 20px;
+  }
+}
+
+/*****************************
+bootstrap daterangepicker overwrite
+*****************************/
+.daterangepicker {
+  @include mobile {
+    width: calc(100% - 32px);
+    margin-bottom: 7px;
+  }
+
+  .drp-calendar {
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+}
+
+/*****************************
+.customDateRangePicker
+*****************************/
+.customDateRangePicker {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+
+  @include mobile {
+    width: 100%;
+  }
+
+  &:before {
+    @include pseudo;
+    width: 54px;
+    height: 100%;
+    background-image: url(./assets/images/icon_calender.svg);
+    background-size: 24px auto;
+    background-repeat: no-repeat;
+    background-position: 60% 46%;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  &:after {
+    @include pseudo;
+    width: 50px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    border-left: 1px solid #ccc;
+    background-color: #f5f5f5;
+    background-image: url(./assets/images/icon_search.svg);
+    background-size: 20px auto;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    pointer-events: none;
+  }
+
+  &__dummy {
+    position: absolute;
+    display: block;
+    width: calc(100% - 50px);
+    height: 100%;
+    top: 0;
+    left: 0;
+    -moz-box-shadow:inset 0 0 3px #ddd;
+    box-shadow:inset 0 0 3px #ddd;
+    pointer-events: none;
+  }
+
+  &__input {
+    position: relative;
+    font-size: 16px;
+    font-size: 1.6rem;
+    color: $color-primary-black;
+    width: 320px;
+    padding: 14px 50px 14px 54px;
+    border: none;
+    outline: none;
+
+    @include mobile {
+      font-size: 16px;
+      font-size: 1.6rem;
+      width: 100%;
+      padding: 12px 50px 12px 54px;
+    }
+  }
+}
+
+/*****************************
+.mailListBlock
+*****************************/
+.mailListBlock {
+  margin-top: 10px;
+
+  &__counter {
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #555;
+    padding-bottom: 3px;
+    // border-bottom: 1px solid #ccc;
+  }
+
+  &__counterNum {
+    display: inline-block;
+    font-size: 20px;
+    font-size: 2.0rem;
+    margin-right: 3px;
+  }
+
+  &__inner {
+    width: 100%;
+    min-height: calc(100vh - 146px);
+    border-top: 1px solid #ccc;
+    background-image: url(./assets/images/logo.png);
+    background-size: 117px 124px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    @include mobile {
+      min-height: calc(100vh - 190px);
+    }
+  }
+}
+
+/*****************************
+.d-mailListTable (d- = desktop)
+*****************************/
+.d-mailListTable {
+  width: 100%;
+  border-top: 1px solid #ccc;
+
+  // below is ONLY for column style
+  thead {
+    .d-mailListTable__from {
+      width: 175px;
+    }
+    .d-mailListTable__to {
+      width: 175px;
+    }
+    .d-mailListTable__more {
+      width: 50px;
+    }
+    .d-mailListTable__subject {
+      width: calc(100% - 565px);
+    }
+    .d-mailListTable__attachment {
+      width: 40px;
+    }
+    .d-mailListTable__date {
+      width: 125px;
+    }
+  }
+
+  tbody {
+    .d-mailListTable__from {
+      width: 175px;
+    }
+    .d-mailListTable__to {
+      width: 175px;
+    }
+    .d-mailListTable__more {
+      width: 50px;
+    }
+    .d-mailListTable__subject {
+      width: calc(100% - 565px);
+    }
+    .d-mailListTable__attachment {
+      width: 40px;
+    }
+    .d-mailListTable__date {
+      width: 125px;
+    }
+  }
+
+  // below is ONLY for basic styles (NO COLUMN adjustment)
+  thead {
+    tr {
+      font-size: 14px;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: $color-secondary-grey02;
+      background-color: #f5f5f5;
+    }
+
+    th {
+      display: inline-block;
+      padding: 12px;
+
+      @include mobile {
+        padding: 12px 15px;
+      }
+    }
+
+    .d-mailListTable__prevTxt {
+      display: inline-block;
+      font-size: 12px;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: $color-secondary-grey03;
+      margin-left: 5px;
+    }
+
+    .d-mailListTable__prevTxtBtn {
+      display: inline-block;
+      position: relative;
+      color: #555;
+      margin-left: 5px;
+      cursor: pointer;
+
+      &:after {
+        position: relative;
+        display: inline-block;
+        content: '';
+        width: 10px;
+        height: 9px;
+        top: 0;
+        bottom: 0;
+        left: auto;
+        right: 0;
+        margin-left: 5px;
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        background-image: url(./assets/images/icon_arrow01.svg);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: 50% 50%;
+      }
+    }
+
+    .d-mailListTable__dateBtn {
+      display: inline-block;
+      position: relative;
+      font-size: 12px;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: $color-secondary-grey02;
+      margin-left: 5px;
+      cursor: pointer;
+
+      &:after {
+        position: relative;
+        display: inline-block;
+        content: '';
+        width: 10px;
+        height: 9px;
+        top: 0;
+        bottom: 0;
+        left: auto;
+        right: 0;
+        margin-left: 5px;
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        background-image: url(./assets/images/icon_arrow01.svg);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: 50% 50%;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      font-size: 15px;
+      font-size: 1.5rem;
+      border-top: 1px solid $color-border01;
+      cursor: pointer;
+      @include transition;
+
+      &:hover {
+        background-color: $color-lightBlue;
+
+        .d-mailListTable__from,
+        .d-mailListTable__to,
+        .d-mailListTable__subject {
+          color: $color-blue;
+        }
+
+        .d-mailListTable__attachmentIcon {
+          background-image: url(./assets/images/icon_clip_hover.svg);
+        }
+      }
+    }
+
+    td {
+      display: inline-block;
+      line-height: 1.4;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      padding: 12px 12px;
+    }
+
+    .d-mailListTable__moreIcon {
+      font-size: 12px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-align: center;
+      line-height: 1;
+      color: #fff;
+      padding: 3px 4px;
+      border-radius: 4px;
+      background-color: $color-secondary-grey03;
+    }
+
+    .d-mailListTable__body {
+      font-size: 13px;
+      font-size: 1.3rem;
+      color: $color-secondary-grey03;
+      // margin-left: 30px;
+    }
+
+    .d-mailListTable__attachmentIcon {
+      display: block;
+      width: 100%;
+      height: 20px;
+      background-image: url(./assets/images/icon_clip.svg);
+      background-repeat: no-repeat;
+      background-size: 15px auto;
+      background-position: center right;
+      vertical-align: middle;
+    }
+
+    .d-mailListTable__date {
+      font-weight: 600;
+    }
+  }
+}
+
+/*****************************
+.m-mailListTable (m- = mobile)
+*****************************/
+@include mobile {
+  .m-mailListTable {
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    border-top: 1px solid $color-border01;
+
+    &__headRow {
+      font-size: 12px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #555;
+      padding: 10px 15px;
+      background-color: #f5f5f5;
+
+      div {
+        display: inline-block;
+      }
+
+      .m-mailListTable__prevTxt {
+        float: left;
+      }
+
+      .m-mailListTable__prevTxtBtn {
+        position: relative;
+        display: inline-block;
+        margin-left: 5px;
+        cursor: pointer;
+
+        &:after {
+          display: inline-block;
+          position: relative;
+          content: '';
+          width: 10px;
+          height: 8px;
+          top: 0;
+          bottom: 0;
+          left: auto;
+          right: 0;
+          margin-left: 5px;
+          -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+          background-image: url(./assets/images/icon_arrow01.svg);
+          background-repeat: no-repeat;
+          background-size: 100% auto;
+          background-position: 50% 50%;
+        }
+      }
+
+      .m-mailListTable__dateBtnWrap {
+        position: relative;
+        float: right;
+        // margin-right: 15px;
+        cursor: pointer;
+      }
+    }
+
+    .m-mailListTable__dateBtn {
+      position: relative;
+      margin-left: 5px;
+
+      &:after {
+        display: inline-block;
+        position: relative;
+        content: '';
+        width: 10px;
+        height: 8px;
+        top: 0;
+        bottom: 0;
+        left: auto;
+        right: 0;
+        margin-left: 5px;
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        background-image: url(./assets/images/icon_arrow01.svg);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: 50% 50%;
+      }
+    }
+
+    &__liRow {
+      .m-mailListTable__li {
+        padding: 13px 15px 10px;
+        border-top: 1px solid $color-border01;
+      }
+
+      .m-mailListTable__fromToBox {
+        display: inline-block;
+        width: calc(100% - 70px);
+        vertical-align: top;
+      }
+
+      .m-mailListTable__fromToTxt {
+        display: inline-block;
+        font-size: 10px;
+        font-size: 1.0rem;
+        font-weight: 600;
+        color: $color-secondary-grey04;
+        width: 35px;
+        padding-bottom: 2px;
+        vertical-align: bottom;
+      }
+
+      .m-mailListTable__from {
+        font-size: 15px;
+        font-size: 1.5rem;
+        line-height: 1;
+      }
+
+      .m-mailListTable__fromEmail {
+        display: inline-block;
+        font-weight: 600;
+        color: $color-secondary-grey01;
+        width: calc(100% - 35px);
+        padding-right: 5px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        vertical-align: bottom;
+      }
+
+      .m-mailListTable__to {
+        font-size: 15px;
+        font-size: 1.5rem;
+      }
+
+      .m-mailListTable__toEmail {
+        display: inline-block;
+        color: $color-secondary-grey02;
+        width: calc(100% - 70px);
+        padding-right: 5px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        vertical-align: bottom;
+      }
+
+      .m-mailListTable__moreIcon {
+        display: inline-block;
+        font-size: 10px;
+        font-size: 1rem;
+        font-weight: 600;
+        text-align: center;
+        line-height: 1;
+        color: #fff;
+        padding: 3px 4px 3px 4px;
+        border-radius: 4px;
+        background-color: $color-secondary-grey03;
+        vertical-align: text-bottom;
+      }
+
+      .m-mailListTable__statusBox {
+        display: inline-block;
+        text-align: right;
+        width: 70px;
+        vertical-align: top;
+      }
+
+      .m-mailListTable__date {
+        font-size: 12px;
+        font-size: 1.2rem;
+        line-height: 1.3;
+        color: $color-secondary-grey02;
+      }
+
+      .m-mailListTable__attachment {
+        width: 100%;
+        margin-top: 2px;
+      }
+
+      .m-mailListTable__attachmentIcon {
+        display: block;
+        width: 100%;
+        height: 15px;
+        background-image: url(./assets/images/icon_clip.svg);
+        background-repeat: no-repeat;
+        background-size: 13px auto;
+        background-position: center right;
+        vertical-align: middle;
+      }
+
+      .m-mailListTable__subject {
+        font-size: 15px;
+        font-size: 1.5rem;
+        line-height: 1.3;
+        margin-top: 5px;
+      }
+
+      .m-mailListTable__body {
+        font-size: 12px;
+        font-size: 1.2rem;
+        line-height: 1.4;
+        color: $color-secondary-grey03;
+        margin-top: 2px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+
+
+
+

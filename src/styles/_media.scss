@@ -1,0 +1,25 @@
+// var for media queries (desktop first approach)
+$tablet-width: 1024px;
+$mobile-width: 767px;
+$mobile-sm-width: 320px;
+
+// mixin : media queries
+@mixin tablet {
+  @media (min-width: #{$mobile-width + 1}) and (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+@mixin mobile-sm {
+  @media (max-width: #{$mobile-sm-width}) {
+    @content;
+  }
+}
+
+
+
+

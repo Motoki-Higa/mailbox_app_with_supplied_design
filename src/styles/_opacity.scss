@@ -1,0 +1,13 @@
+// var : opacity
+$opacity: 0.7;
+
+// mixin : psudo (::before ::after)
+@mixin pseudo(){
+  position: absolute;
+  display: block;
+  content: '';
+}
+
+
+
+

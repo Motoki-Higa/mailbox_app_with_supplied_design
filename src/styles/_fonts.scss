@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+// variable : font
+$font-hira-reg: 'Hiragino Kaku Gothic Pro', sans-serif;
+
+/*****************************
+h, p
+*****************************/
+h2, .h2 {
+  font-size: 76px;
+  letter-spacing: 0.0725em;
+  line-height: 1.3;
+
+  @include mobile {
+    font-size: 40px;
+  }
+}
+
+h3, .h3 {
+  font-size: 48px;
+  letter-spacing: 0.0725em;
+  line-height: 1;
+
+  @include mobile {
+    font-size: 28px;
+    // text-align: center;
+  }
+}
+
+h4, .h4 {
+  font-size: 24px;
+  letter-spacing: 0.0725em;
+  line-height: 1;
+
+  @include mobile {
+    font-size: 14px;
+  }
+}
+
+p {
+  line-height: 1.4;
+
+  @include mobile {
+    font-size: 12px;
+  }
+}
+
+small {
+  font-size: 70%;
+}
+
+/*****************************
+.txt--
+*****************************/
+// text weight & style
+.txt--bold {
+  font-weight: bold !important;
+}
+.txt--normal {
+  font-weight: normal !important;
+}
+.txt--italic {
+  font-style: italic !important;
+}
+.txt--nodecor {
+  text-decoration: none !important;
+}
+.txt--up {
+  text-transform: uppercase !important;
+}
+.txt--sup {
+  font-size: 50%;
+  vertical-align: top;
+}
+.txt--hashBreak {
+  position: relative;
+  line-height: 1.6;
+  padding-left: 20px;
+
+  @include mobile {
+    font-size: 12px;
+  }
+
+  &:before {
+    position: absolute;
+    content: '※';
+    margin-left: -20px;
+  }
+}
+
+// text align
+.txt--r {
+  text-align: right !important;
+}
+.txt--r {
+  text-align: right !important;
+}
+.txt--c {
+  text-align: center !important;
+}
+.txt--j {
+  text-align: justify !important;
+}
+
+// txt pointer
+.txt--link {
+  cursor: pointer;
+}
+
+// text underline
+@mixin txtUnderline {
+  text-decoration: underline;
+}
+.txt--underline {
+  text-decoration: underline !important;
+}
+
+// ellipsis
+@mixin ellipsis(){
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.txt--ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// text smoothing
+@mixin txtSmoothing(){
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.txt--smooth {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
