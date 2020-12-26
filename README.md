@@ -5,14 +5,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Simple mail box panel with a functionality of filtering results by date.
 Also the list can be ordered by date.
 
-# Prerequisites
+### Prerequisites
 
 Make sure you have installed all of the following prerequisites on your development machine:
 
 - Node.js - [Download & Install Node.js](https://nodejs.org/en/download/) and the npm package manager.
 - npm - [Download & Install npm](https://www.npmjs.com/get-npm)
 
-## Installing
+### Installing
 
 Clone the project to your local (cd /your_directory)
 
@@ -22,9 +22,11 @@ git clone https://github.com/Motoki-Higa/mailbox_panel_with_supplied_design.git
 
 To install the dependencies, run this in the application folder from the command-line:
 
-## Start project
+### Start project
 
-### `npm start`
+```
+npm start
+```
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -32,12 +34,16 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `npm test`
+```
+npm test
+```
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+```
+npm run build
+```
 
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -47,7 +53,9 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+```
+npm run eject
+```
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
