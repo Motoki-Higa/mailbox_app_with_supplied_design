@@ -1,8 +1,28 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Mailbox panel (design supplied)
 
-In the project directory, you can run:
+Simple mail box panel with a functionality of filtering results by date.
+Also the list can be ordered by date.
+
+# Prerequisites
+
+Make sure you have installed all of the following prerequisites on your development machine:
+
+- Node.js - [Download & Install Node.js](https://nodejs.org/en/download/) and the npm package manager.
+- npm - [Download & Install npm](https://www.npmjs.com/get-npm)
+
+## Installing
+
+Clone the project to your local (cd /your_directory)
+
+```
+git clone https://github.com/Motoki-Higa/mailbox_panel_with_supplied_design.git
+```
+
+To install the dependencies, run this in the application folder from the command-line:
+
+## Start project
 
 ### `npm start`
 
@@ -36,33 +56,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
